@@ -234,7 +234,7 @@ export default function App() {
     }
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/favorites', {
+      const response = await fetch('https://country-explorer-orpin.vercel.app/api/auth/favorites', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -258,7 +258,7 @@ export default function App() {
       if (!isLoggedIn) return;
       
       try {
-        const response = await fetch('http://localhost:5000/api/auth/me', {
+        const response = await fetch('https://country-explorer-orpin.vercel.app/api/auth/me', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`
           }
