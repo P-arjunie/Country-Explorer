@@ -13,6 +13,9 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 
 
+app.get("/", (req, res) => {
+    res.send("Backend is working!");
+  });
 
 // Error handling middleware
 app.use((err, req, res, next) => {
