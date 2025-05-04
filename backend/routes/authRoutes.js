@@ -6,7 +6,7 @@ import { register,
     login,
     getCurrentUser,
     updateFavorites
- } from '../controllers/authCOntroller';
+ } from '../controllers/authController';
 
 // Public routes
 router.post('/register', register);
