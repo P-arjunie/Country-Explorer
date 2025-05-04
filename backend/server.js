@@ -12,6 +12,8 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 
+
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
