@@ -2,11 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const auth = require('../middleware/auth');
-import { register,
-    login,
-    getCurrentUser,
-    updateFavorites
- } from '../controllers/authController';
+const { register, login, getCurrentUser, updateFavorites } = require('../controllers/authController');
 
 // Public routes
 router.post('/register', register);
