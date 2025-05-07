@@ -298,7 +298,7 @@ export default function App() {
         onShowFavorites={handleShowFavorites}
         theme={theme}
         toggleTheme={toggleTheme}
-        onShowLogin={handleShowLogin}
+        onLoginClick={() => setShowLoginForm(true)}
       />
       
       {showFavorites && isLoggedIn && (
