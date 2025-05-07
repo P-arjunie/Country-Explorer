@@ -298,6 +298,7 @@ export default function App() {
         onShowFavorites={handleShowFavorites}
         theme={theme}
         toggleTheme={toggleTheme}
+        onShowLogin={handleShowLogin}
       />
       
       {showFavorites && isLoggedIn && (
