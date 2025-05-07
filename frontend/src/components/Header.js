@@ -1,4 +1,4 @@
-export default function Header({ isLoggedIn, user, onLogout, onShowFavorites, theme, toggleTheme }) {
+export default function Header({ isLoggedIn, user, onLogout, onShowFavorites, theme, toggleTheme, onLoginClick }) {
   return (
     <header className={`${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white text-gray-800'} shadow-md transition-colors duration-300`}>
       <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -40,7 +40,12 @@ export default function Header({ isLoggedIn, user, onLogout, onShowFavorites, th
             </div>
             //if the user is not logged in, show the login button 
           ) : (
-            <span className={`w-full text-center ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>Login</span>
+            <button
+              onClick={onLoginClick}
+              className={`w-full text-center ${theme === 'dark' ? 'text-blue-300 hover:text-blue-200' : 'text-blue-600 hover:text-blue-800'} font-medium hover:underline`}
+            >
+              Login
+            </button>
           )}
         </div>
       </div>
